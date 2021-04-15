@@ -7,12 +7,15 @@ canvas {
   display: block;
 }
 #main{
-  background: rgba(200, 0, 255, 0.5);
-  padding: 3%;
-  width: 40%;
-  height: 120%;
+  background: rgba(100, 0, 255, 0.2);
+  padding: 1%;
   border-radius: 25px;
-  left: 10%;
+  left: 5%;
   top: 5%;
   position: absolute;
+}
+h1{
+  background: rgba(7, 45, 150, 0.2);
+  padding: 1%;
+  border-radius: 25px;
 }
