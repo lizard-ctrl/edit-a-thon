@@ -1,22 +1,104 @@
-html, body {
+@font-face {
+  font-family: 'times_dotitalic';
+  src: url('fonts/timesdotitalic-webfont.woff2') format('woff2'),
+    url('fonts/timesdotitalic-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'times_dotroman';
+  src: url('fonts/timesdotrom-webfont.woff2') format('woff2'),
+    url('fonts/timesdotrom-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+html,
+body {
   margin: 0;
   padding: 0;
+  line-height: 1.15;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
 }
 
 canvas {
   display: block;
+  position: fixed;
+  z-index: -1;
+  pointer-events: none;
 }
-#main{
-  /*background: rgba(100, 0, 255, 0.2);*/
-  padding: 1%;
-  border-radius: 25px;
-  width: 40%;
+
+html {
+  line-height: 1.15;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+body {
+  margin: 0;
+  font-family: "times_dotroman", Times, "Times New Roman", serif;
+  line-height: 1.1;
+}
+
+h1 {
+  font-size: 9vw;
+  font-weight: normal;
+  line-height: .9;
+  margin: 0 0 5vw;
+}
+
+h2 {
+  font-family: 'Xanh Mono', monospace;
+  font-size: 36px;
+  font-weight: normal;
+  margin: 42px 0 12px;
+}
+
+h3 {
+  font-family: 'Xanh Mono', monospace;
+  font-weight: 400;
+  font-size: 24px;
+  margin: 0 0 10px;
+}
+
+p,
+li {
+  font-size: 24px;
+  line-height: 1.1;
+  margin: 0 0 12px;
+}
+
+li {
+  margin: 0;
+}
+
+ul li {
+  list-style-type: square;
+}
+
+a {
+  background-color: transparent;
+}
+
+.emphasis {
+  font-family: "times_dotitalic", Times, "Times New Roman", serif;
+}
+
+#main {
+  width: 90%;
   left: 5%;
-  top: 2%;
+  top: 8%;
   position: absolute;
+  padding-bottom: 7vw;
 }
-h1{
- /* background: rgba(7, 45, 150, 0.2); */
-  padding: 1%;
-  border-radius: 25px;
+
+.container {
+  width: 60%;
+  max-width: 600px;
 }

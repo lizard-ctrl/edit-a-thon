@@ -1,7 +1,7 @@
 var c1, c2, c3;
 
 function setup() {
-  createCanvas(displayWidth, displayHeight);
+  createCanvas(windowWidth, windowHeight);
   c1 = color(201, 147, 237);
   c2 = color(147, 183, 237);
   
@@ -27,4 +27,8 @@ function setGradient(c1, c2) {
     stroke(c);
     line(0, y, width, y);
   }
+}
+
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
 }
