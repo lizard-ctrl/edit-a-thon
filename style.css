@@ -24,13 +24,7 @@ body {
   /* 1 */
   -webkit-text-size-adjust: 100%;
   /* 2 */
-}
-
-canvas {
-  display: block;
-  position: fixed;
-  z-index: -1;
-  pointer-events: none;
+  height: 100%;
 }
 
 html {
@@ -40,17 +34,25 @@ html {
   /* 2 */
 }
 
+canvas {
+  display: block;
+  position: fixed;
+  z-index: -1;
+  pointer-events: none;
+}
+
 body {
-  margin: 0;
+  margin: 0px;
   font-family: "times_dotroman", Times, "Times New Roman", serif;
   line-height: 1.1;
+  box-sizing: border-box;
 }
 
 h1 {
-  font-size: 9vw;
+  font-size: 4.7vw;
   font-weight: normal;
   line-height: .9;
-  margin: 0 0 5vw;
+  margin: 0 0 2vw;
 }
 
 h2 {
@@ -84,6 +86,16 @@ ul li {
 
 a {
   background-color: transparent;
+  text-decoration: none;
+  color: blue;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:visited {
+  color: blue;
 }
 
 .emphasis {
@@ -91,29 +103,66 @@ a {
 }
 
 #main {
-  width: 90%;
-  left: 5%;
-  top: 8%;
   position: absolute;
-  padding-bottom: 7vw;
+  padding: 5vw;
+  width: 90%;
 }
 
 .container {
-  width: 70%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.left-side {
+  align-self: start;
+  position: sticky;
+  top: 5vw;
+  flex: 0 1 50%;
+}
+
+.right-side {
+  padding-left: 5vw;
+  flex: 0 1 50%;
   max-width: 540px;
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (min-width: 1400px) {
   .container {
-    width: 90%;
+    justify-content: space-around;
+  }
+}
+
+@media only screen and (max-width: 950px) {
+
+  #main {
+    padding-bottom: 100px;
+  }
+
+  .container {
+    flex-direction: column;
+  }
+
+  .left-side {
+    position: inherit;
+    margin-bottom: 30px;
+  }
+
+  .right-side {
+    padding-left: 0;
+  }
+
+  h1 {
+    font-size: 7.6vw;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  h1 {
+    font-size: 9.2vw;
   }
 }
 
 @media only screen and (max-width: 500px) {
-  .container {
-    width: 100%;
-  }
-
   h1 {
     font-size: 40px;
   }
