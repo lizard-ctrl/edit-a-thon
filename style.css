@@ -99,6 +99,31 @@ a {
 }
 
 .container {
-  width: 60%;
-  max-width: 600px;
+  width: 70%;
+  max-width: 540px;
+}
+
+@media only screen and (max-width: 700px) {
+  .container {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .container {
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  p,
+  li {
+    font-size: 20px;
+  }
 }
